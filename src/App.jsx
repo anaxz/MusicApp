@@ -1,6 +1,6 @@
 import React from 'react';
 import Profile from './components/Profile';
-import SongsList from './components/SongsList';
+import SongsList from './components/SongsList/SongsList';
 
 function App() {
   return (
