@@ -31,17 +31,6 @@ const SongsList = () => {
         return displayLike(bool, id)
     }
 
-    // const changeLikes = () => {
-    //     setLike( prevArr => {
-    //         prevArr.map(e => {
-    //             e.bool = !e.bool
-    //             console.log(e.value)
-    //             if(e.bool) return e.value = 'like'
-    //             else return e.value = 'dislike'
-    //         })
-    //     })
-    // }
-
     return (
         <table style={{ border: "1px solid black", width: "100vw", textAlign: "center" }}>
             <thead>
