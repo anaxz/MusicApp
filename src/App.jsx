@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Profile, SongsList } from "./components";
+import { ArtistsList, SongsList } from "./components";
 
 import '../app.css';
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <main>
       <h1>Music App</h1>
-      <Profile />
+      <ArtistsList />
       <SongsList />
     </main>
   );

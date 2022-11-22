@@ -1,10 +1,51 @@
-#song-list {
-    border: 1px solid black;
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.artist-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-card {
+    border: 1px red solid;
+}
+
+#song-list-subtitle {
+    border: 4px solid greenyellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* #song-list {
+    display: flex;
+    flex-direction: row ;
+    border: 2px solid purple;
     width: 100vw;
     text-align: "center";
+} */
+
+#all-songs-list {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+}
+
+.single-container {
+    border: 2px solid green;
+    margin: auto 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .song-img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
+}
+
+.single-container  > button {
+    /* border: 1em solid orange; */
+    width: fit-content;
 }

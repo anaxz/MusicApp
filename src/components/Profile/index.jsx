@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Profile = ({ name, type, country, intro }) => {
-
     
     return <div className='profile-card'>
         <p>Name: {name}</p>
