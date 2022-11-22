@@ -1,13 +1,14 @@
 import React from 'react'
 
-const Profile = () => {
+const Profile = ({ name, type, country, intro }) => {
 
-    return <div>
-            <p>Name: LiSa</p>
-            <p>Type: Anime Punk</p>
-            <p>Country: Japan</p>
-            <p>Intro: Risa Oribe (織部 里沙, Oribe Risa, born June 24, 1987), better known by her stage name Lisa (stylized as LiSA), is a Japanese singer, songwriter and lyricist from Seki, Gifu, signed to Sacra Music under Sony Music Artists.</p>
-        </div>
+    
+    return <div className='profile-card'>
+        <p>Name: {name}</p>
+        <p>Type: {type}</p>
+        <p>Country: {country}</p>
+        <p>Intro: {intro}</p>
+    </div>
 }
 
 export default Profile; 

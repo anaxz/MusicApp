@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 
 const SongsList = () => {
+    const url = 'https://e.snmc.io/i/600/s/9d9e3fd45354972ac4706d02e4d744c5/7491053/lisa-%E7%B4%85%E8%93%AE%E8%8F%AF-gurenge-Cover-Art.jpg';
+
     const [albumImg, setAlbumImg] = useState([
-        { id: 0, name: 'Gurenge', src: 'https://e.snmc.io/i/600/s/9d9e3fd45354972ac4706d02e4d744c5/7491053/lisa-%E7%B4%85%E8%93%AE%E8%8F%AF-gurenge-Cover-Art.jpg', alt: 'img1', like: false },
-        { id: 1, name: 'song2', src: 'http:link2', alt: 'img2', like: false },
-        { id: 2, name: 'song3', src: 'http:link3', alt: 'img3', like: false }
+        { id: 0, name: 'Gurenge', src: url, alt: 'img1', like: false },
+        { id: 1, name: 'song2', src: url, alt: 'img2', like: false },
+        { id: 2, name: 'song3', src: url, alt: 'img3', like: false }
     ])
     
     const renderRows = () => {
