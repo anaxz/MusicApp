@@ -15,7 +15,7 @@ const SongsList = () => {
                 <h3>{s.name}</h3>
                 <img className='song-img' src={s.src} alt={s.alt}/>
                 <p id={`like-icon-${s.id}`} style={{ display:'none' }}>Like</p>
-                <button onClick={() => likeBtn(s.like, p.id)}>Like?</button>
+                <button onClick={() => likeBtn(s.like, s.id)}>Like?</button>
             </div>
         ))
     }
@@ -29,7 +29,7 @@ const SongsList = () => {
     const likeBtn = (bool, id) => {
         bool = !bool
         console.log(bool)
-        albumImg[id].like = bool
+        song[id].like = bool
         return displayLike(bool, id)
     }
 
