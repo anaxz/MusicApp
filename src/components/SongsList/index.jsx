@@ -1,17 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const SongsList = () => {
     const [albumImg, setAlbumImg] = useState([
-        { id: 0, name: 'Gurenge', src: 'http:link1', alt: 'img1', like: false },
+        { id: 0, name: 'Gurenge', src: 'https://e.snmc.io/i/600/s/9d9e3fd45354972ac4706d02e4d744c5/7491053/lisa-%E7%B4%85%E8%93%AE%E8%8F%AF-gurenge-Cover-Art.jpg', alt: 'img1', like: false },
         { id: 1, name: 'song2', src: 'http:link2', alt: 'img2', like: false },
         { id: 2, name: 'song3', src: 'http:link3', alt: 'img3', like: false }
     ])
     
     const renderRows = () => {
-        return albumImg.map(p => ( 
-        <tr>
+        return albumImg.map((p, i) => ( 
+        <tr key={i}>
             <td>{p.name}</td>
-            <td><img src={p.src} alt={p.alt}/></td>
+            <td>
+                <img className='song-img' src={p.src} alt={p.alt}/>
+            </td>
             <p id={`like-icon-${p.id}`} style={{ display:'none' }}>Like</p>
             <button onClick={() => likeBtn(p.like, p.id)}>Like?</button>
         </tr>
@@ -31,19 +33,8 @@ const SongsList = () => {
         return displayLike(bool, id)
     }
 
-    // const changeLikes = () => {
-    //     setLike( prevArr => {
-    //         prevArr.map(e => {
-    //             e.bool = !e.bool
-    //             console.log(e.value)
-    //             if(e.bool) return e.value = 'like'
-    //             else return e.value = 'dislike'
-    //         })
-    //     })
-    // }
-
     return (
-        <table style={{ border: "1px solid black", width: "100vw", textAlign: "center" }}>
+        <table id='song-list'>
             <thead>
                 <tr>
                     <th>Name</th>

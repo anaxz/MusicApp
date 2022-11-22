@@ -1,6 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+// in react ver18 will throw err if not use this
 
-import App from './App.jsx';
+import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const container = document.getElementById('root');
+const root = createRoot(container)
+root.render(<App/>);

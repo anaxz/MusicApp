@@ -1,6 +1,8 @@
 import React from 'react';
-import Profile from './components/Profile';
-import SongsList from './components/SongsList/SongsList';
+
+import { Profile, SongsList } from "./components";
+
+import '../app.css';
 
 function App() {
   return (
@@ -13,9 +15,3 @@ function App() {
 }
 
 export default App;
-
-// npm run build after changes then
-// npm run dev to start webpage
-// if doesn't work try npm install the babel files
-
-// added older node and changed config file to work with jsx
