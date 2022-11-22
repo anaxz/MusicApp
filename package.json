@@ -29,6 +29,7 @@
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
+    "axios": "^1.2.0",
     "node": "16.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

@@ -19,13 +19,11 @@ h1 {
     justify-content: space-evenly;
 }
 
-/* #song-list {
-    display: flex;
-    flex-direction: row ;
+#song-list {
     border: 2px solid purple;
-    width: 100vw;
+    /* width: 100vw; */
     text-align: "center";
-} */
+}
 
 #all-songs-list {
     border: 2px solid red;
@@ -38,6 +36,11 @@ h1 {
     margin: auto 20px;
     display: flex;
     flex-direction: column;
+}
+
+.single-container > .like-icon {
+    /* border: 2px solid orange; */
+    display: none;
 }
 
 .song-img {
