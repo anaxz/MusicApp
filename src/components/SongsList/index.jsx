@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import './SongsList.css'
+
 const SongsList = () => {
     const url = 'https://e.snmc.io/i/600/s/9d9e3fd45354972ac4706d02e4d744c5/7491053/lisa-%E7%B4%85%E8%93%AE%E8%8F%AF-gurenge-Cover-Art.jpg';
 
@@ -15,15 +17,15 @@ const SongsList = () => {
     ])
     
     // when lyric is pressed fetch it from api
-    useEffect(() => {
-        async function getLyrics(){
-            const response = await axios.get('https://api.lyrics.ovh/v1/Coldplay/Adventure%20of%20a%20Lifetime')
-            console.log(response.data)
-            setLyrics(response.data, true)
-        }
+    // useEffect(() => {
+    //     async function getLyrics(){
+    //         const response = await axios.get('https://api.lyrics.ovh/v1/Coldplay/Adventure%20of%20a%20Lifetime')
+    //         console.log(response.data)
+    //         setLyrics(response.data, true)
+    //     }
 
-        getLyrics()
-    }, [lyrics]);
+    //     getLyrics()
+    // }, [lyrics]);
 
     function handleLyric(e){
         // e.preventDefault();

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Profile.css'
+
 const Profile = ({ name, type, country, intro }) => {
     
     return <div className='profile-card'>

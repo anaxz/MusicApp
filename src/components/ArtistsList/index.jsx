@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
+import './ArtistsList.css'
 import { Profile }  from '../';
 import {useTest} from '../../customHooks/'
 
