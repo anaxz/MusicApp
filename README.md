@@ -2,6 +2,19 @@
 ```npm run build```
 ```npm run dev```
 
+## Changelog
+- Added data and components
+- Added like button
+- Added netlify script
+- Refactored to vite instead of webpack
+- Added css and refactored to separate css scripts
+- Added routing and navbar
+
+## Bugs
+- useEffect -> need more practise
+- useNavigate - issue due to hook in wrong place?
+- custom hook - not displaying properly
+
 ### Ref
 - exercise1: https://github.com/getfutureproof/fp_study_notes_intro_to_react
 - exercise2: https://github.com/getfutureproof/fp_study_notes_react_state_and_eventing

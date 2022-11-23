@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Card from 'react-bootstrap/Card';
+import Badge from 'react-bootstrap/Badge';
+
 import './SongsList.css'
 
 const SongsList = () => {
@@ -59,19 +64,20 @@ const SongsList = () => {
 
     const renderRows = () => {
         return song.map((s, i) => (
-            <div className='single-container' key={i}>
-                <h3>{s.name}</h3>
-                <img className='song-img' src={s.src} alt={s.alt}/>
+            <Card className='single-container' key={i}>
+                <Card.Title >{s.name}</Card.Title>
+                <Card.Img variant="top" className='song-img' src={s.src} alt={s.alt}/>
 
                 <div className='lyrics-container'>
                     {/* <p>{ displayLyrics() }</p> */}
                 </div>
-                
-                <button id='lyric-btn' onClick={handleLyric}>Lyrics</button>
+                <ButtonGroup aria-label="Basic example" id='btnGroup'>
+                    <Button id='lyric-btn' onClick={handleLyric} variant="light">Lyrics</Button>
 
-                <p id={`like-icon-${s.id}`} className='like-icon'>Like</p>
-                <button onClick={() => likeBtn(s.like, s.id)}>Like?</button>
-            </div>
+                    <Button onClick={() => likeBtn(s.like, s.id)} variant="light">Like?</Button>
+                    <Badge id={`like-icon-${s.id}`} className='like-icon' bg="secondary" >Like</Badge>
+                </ButtonGroup>
+            </Card>
         ))
     }
 
@@ -90,13 +96,14 @@ const SongsList = () => {
 
     return (
         <div id='song-list'>
-            <div id='song-list-subtitle'>
+            <div id='mini-nav'>
                 <h3>Name</h3>
-                <h3>Image</h3>
+                <h3>Type</h3>
                 <button onClick={() => handleBack()}>Back</button>
             </div>
-            
-            <div id='all-songs-list'>{ renderRows() } </div>
+            <div id='all-songs-list'>
+                {renderRows() } 
+            </div>
         </div>
     )
 }
