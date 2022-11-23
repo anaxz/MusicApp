@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 import './SongsList.css'
@@ -15,6 +16,19 @@ const SongsList = () => {
     const [lyrics, setLyrics] = useState([
         { val: '', bool: false }, { val: '', bool: false }, { val: '', bool: false }
     ])
+
+    const [back, setBack] = useState(false);
+
+    function handleBack(e) {
+        // const userIsInactive = useFakeInactiveUser();
+        const navigate = useNavigate();
+       
+        useEffect(() => {
+            setBack(prev => !prev)
+            console.log('back', back)
+            if(back) navigate("/artists");
+        }, [back]);
+    }
     
     // when lyric is pressed fetch it from api
     // useEffect(() => {
@@ -79,6 +93,7 @@ const SongsList = () => {
             <div id='song-list-subtitle'>
                 <h3>Name</h3>
                 <h3>Image</h3>
+                <button onClick={() => handleBack()}>Back</button>
             </div>
             
             <div id='all-songs-list'>{ renderRows() } </div>
