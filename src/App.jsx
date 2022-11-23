@@ -1,21 +1,31 @@
 import React from 'react';
-import Profile from './components/Profile';
-import SongsList from './components/SongsList/SongsList';
+import { Routes, Route, useNavigate } from 'react-router-dom'
+
+import Header from './layouts/Header';
+import { ArtistsList, SongsList } from "./components";
+
+import useTest from './customHooks/useTest';
+import { useWindowSize } from './customHooks'
+
+import '../app.css';
+
+function testHook(){
+  const device = useWindowSize();
+  console.log(device.height)
+}
 
 function App() {
   return (
-    <main>
-      <h1>Music App</h1>
-      <Profile />
-      <SongsList />
-    </main>
+    <Routes>
+      <Route path='/' element={<Header />} >
+        <Route path='artists' element={<ArtistsList />}></Route>
+        <Route path='song-list' element={<SongsList />}></Route>
+
+        <Route path='*' element={<h1>404</h1>} ></Route>
+        {/* <Route index element={<p>{testHook()}</p>} ></Route> */}
+      </Route>
+    </Routes>
   );
 }
 
 export default App;
-
-// npm run build after changes then
-// npm run dev to start webpage
-// if doesn't work try npm install the babel files
-
-// added older node and changed config file to work with jsx
