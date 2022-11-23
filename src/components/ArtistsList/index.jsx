@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
 import { Profile }  from '../';
+import {useTest} from '../../customHooks/'
 
 const ArtistsList = () => {
 
@@ -20,9 +21,18 @@ const ArtistsList = () => {
             name={a.name} type={a.type} country={a.country} intro={a.intro} />
         ))
     }
+    
+    // function testHook(){
+    //     const [txt, setTxt] = useTest('');
+    //     // setTxt('hello')
+    //     console.log(txt)
+    //     // setTxt('Hello world')
+    //     return txt;
+    // }
 
     return <div className="artist-list">
         { renderDisplay() }
+        {/* <p>{testHook()}</p> */}
     </div>
 }
 

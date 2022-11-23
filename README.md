@@ -8,6 +8,7 @@
 - exercise3: https://github.com/getfutureproof/fp_study_notes_react_props
 - exercise4: https://github.com/getfutureproof/fp_study_notes_react_useEffect
 - exercise5: https://github.com/getfutureproof/fp_study_notes_react_navigation
+- exercise6: https://github.com/getfutureproof/fp_study_notes_advanced_hooks
 - lyrics api: https://lyricsovh.docs.apiary.io/#reference/0/lyrics-of-a-song/search
 
 ### webpack notes
