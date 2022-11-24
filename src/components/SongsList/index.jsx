@@ -19,13 +19,12 @@ const SongsList = () => {
     ])
 
     const [lyrics, setLyrics] = useState([
-        { val: '', bool: false }, { val: '', bool: false }, { val: '', bool: false }
+        { id: 0, val: '', bool: false }, { id: 1, val: '', bool: false }, { id: 2, val: '', bool: false }
     ])
 
     const [back, setBack] = useState(false);
 
     function handleBack(e) {
-        // const userIsInactive = useFakeInactiveUser();
         const navigate = useNavigate();
        
         useEffect(() => {
@@ -62,7 +61,7 @@ const SongsList = () => {
         return lyrics;
     }
 
-    const renderRows = () => {
+    const songRows = () => {
         return song.map((s, i) => (
             <Card className='single-container' key={i}>
                 <Card.Title >{s.name}</Card.Title>
@@ -75,7 +74,7 @@ const SongsList = () => {
                     <Button id='lyric-btn' onClick={handleLyric} variant="light">Lyrics</Button>
 
                     <Button onClick={() => likeBtn(s.like, s.id)} variant="light">Like?</Button>
-                    <Badge id={`like-icon-${s.id}`} className='like-icon' bg="secondary" >Like</Badge>
+                    <Badge id={`like-icon-${s.id}`} className='song-like-icon' bg="secondary" >Like</Badge>
                 </ButtonGroup>
             </Card>
         ))
@@ -102,7 +101,7 @@ const SongsList = () => {
                 <button onClick={() => handleBack()}>Back</button>
             </div>
             <div id='all-songs-list'>
-                {renderRows() } 
+                {songRows() } 
             </div>
         </div>
     )

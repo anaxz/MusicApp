@@ -12,6 +12,7 @@
 - Added routing and navbar
 - Added react bootstrap
 - Fixed & added test setup (testing branch)
+[x] need to move artist list into app for like counter btn
 
 ## Bugs
 - useEffect -> need more practise
