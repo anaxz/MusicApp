@@ -7,15 +7,7 @@ import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import { screen, render, queryByAttribute } from '@testing-library/react';
 
-import Profile from "../Profile";
 import SongsList from "./SongsList";
-
-it('Profile', () => {
-    render(<SongsList />)
-
-    const name = screen.getByText(/Name: LiSa/);
-    expect(name).toBeInTheDocument 
-}) 
 
 describe.skip('SongsList', () => {
     const getById = queryByAttribute.bind(null, 'id');
