@@ -9,11 +9,13 @@ function useTest(){
         function printText(value){
             setTest(value)
         }
+        window.addEventListener('input', printText(text))
+
         printText(text)
 
         // need to reset data
-        // return setTest('')
-    }, [])
+        return () => window.removeEventListener('input', setTest(''))
+    }, [test])
     // must return a value
     return test;
 }

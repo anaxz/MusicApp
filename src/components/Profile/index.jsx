@@ -8,12 +8,12 @@ const Profile = ({ name, type, country, intro }) => {
     
     return <Card className='profile-card'>
         <Card.Title>{name}</Card.Title>
-        <Card.Text>
+        <div>
             <p>Name: {name}</p>
             <p>Type: {type}</p>
             <p>Country: {country}</p>
             <p>Intro: {intro}</p>
-        </Card.Text>
+        </div>
     </Card>
 
     // return <div className='profile-card'>
