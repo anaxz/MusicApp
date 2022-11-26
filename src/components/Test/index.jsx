@@ -4,25 +4,27 @@ import {useTest} from '../../customHooks/'
 
 const Test = () => {
     const [val, setVal] = useState('');
-    const txt = useTest('');
+    let txt;
 
-    // useEffect(() => {
-    //     // testHook()
-    // }, [txt])
+    useEffect(() => {
+        // testHook()
+        // txt = useTest(val);
+    }, [val])
 
     function testHook(e){
         // const temp = e.value;
-        // setTxt('hello world')
+        setVal('hello')
+        // const txt = useTest(val);
         console.log(txt)
-        // setTxt('Hello world')
         return txt;
     }
 
     return <>
         <label htmlFor='txt-input'>Type random text:</label>
-        <input type="text" id='txt-input'
-            placeholder={txt} onChange={testHook} />
+        <input type="text" id='txt-input' onChange={() => testHook()} />
         <p>{ txt }</p>
+        
+        <p>Counter</p>
     </>
 }
 

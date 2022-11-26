@@ -33,3 +33,6 @@
 - npm run dev to start webpage
 - if doesn't work try npm install the babel files
 - added older node and changed config file to work with jsx
+
+## plan
+- useNavigate -> check the study notes/guide

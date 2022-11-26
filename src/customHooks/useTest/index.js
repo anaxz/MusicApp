@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
 
-function useTest(){
-    let text = 'test';
+function useTest(value){
+    // let text = 'test';
     // set text
-    const [test, setTest] = useState(text)
+    const [test, setTest] = useState(null)
 
     useEffect(() => {
-        function printText(value){
+        function printText(){
             setTest(value)
         }
-        window.addEventListener('input', printText(text))
+        window.addEventListener('input', printText)
 
-        printText(text)
+        // printText(text)
 
         // need to reset data
         return () => window.removeEventListener('input', setTest(''))
