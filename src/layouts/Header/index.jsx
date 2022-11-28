@@ -9,9 +9,9 @@ function Header() {
     return <>
         <h1>Music App</h1>
         <Navbar id='navbar'>
-            <NavLink activeClassName="active" className='nav-link' to='/'>Home</NavLink> 
-            <NavLink activeClassName="active" className='nav-link' to='artists'>Artists</NavLink>
-            <NavLink activeClassName="active" className='nav-link' to='song-list'>Songs List</NavLink>
+            <NavLink activateClassName="active" className='nav-link' to='/'>Home</NavLink> 
+            <NavLink activateClassName="active" className='nav-link' to='artists'>Artists</NavLink>
+            <NavLink activateClassName="active" className='nav-link' to='song-list'>Songs List</NavLink>
         </Navbar>
         <Outlet />
     </>

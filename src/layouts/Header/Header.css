@@ -28,18 +28,18 @@ nav a.nav-link {
 
 .nav-link:hover {
     font-weight: bold;
-    color: yellow;
+    color: gold;
 }
 
 nav a.active {
     font-weight: bold;
-    color: yellow
+    color: gold
 }
 
 /* nav a.undiscovered {
     color: grey;
-}
+}*/
 
-nav a.discovered {
+/* nav a.discovered {
     color: gold;
-} */
+}  */
