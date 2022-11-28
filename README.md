@@ -1,7 +1,9 @@
 ##
-```npm run build```
-```npm run dev```
-```npm test script_name```
+- ```npm i``` install dependencies
+- ```npm run build```
+- ```npm run dev```
+- ```npm test script_name```
+- ```npm run coverage```
 
 ## Changelog
 - Added data and components
@@ -12,7 +14,7 @@
 - Added routing and navbar
 - Added react bootstrap
 - Fixed & added test setup (testing branch)
-- useNavigate works
+- useNavigate works & react bootstrap now works with css
 [x] need to move artist list into app for like counter btn
 
 ## Bugs
