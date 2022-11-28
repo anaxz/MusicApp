@@ -42,4 +42,25 @@ describe('Profile.jsx', () => {
         expect(name.textContent).toMatch('LiSa');
         // expect(queryByText('Japan')).toBeTruthy();
     })
+
+    test('check all props displayed 2', () => {
+        render(
+            <Profile
+                name={nameProp}
+                type={typeProp}
+                country={countryProp}
+                intro={introProp}
+            />
+        ); 
+        const name = screen.getByText(nameProp);
+        // const name = queryByText(nameProp);
+        expect(name.textContent).toMatch('LiSa');
+        // expect(queryByText('Japan')).toBeTruthy();
+    })
+    
 })
+
+//step1: render
+//2: find elements we want to interact with
+//3: intereact with those elements
+//4: assert the expected results
