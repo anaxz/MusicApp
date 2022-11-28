@@ -12,11 +12,11 @@
 - Added routing and navbar
 - Added react bootstrap
 - Fixed & added test setup (testing branch)
+- useNavigate works
 [x] need to move artist list into app for like counter btn
 
 ## Bugs
 - useEffect -> need more practise
-- useNavigate - issue due to hook in wrong place?
 - custom hook - kinda works but need more practise
 
 ### Ref
@@ -33,6 +33,3 @@
 - npm run dev to start webpage
 - if doesn't work try npm install the babel files
 - added older node and changed config file to work with jsx
-
-## plan
-- useNavigate -> check the study notes/guide

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 import Header from './layouts/Header';
 import { Test, ArtistsList, SongsList } from "./components";
@@ -33,8 +33,7 @@ function App() {
         <Route path='song-list' element={<SongsList />}></Route>
 
         <Route path='*' element={<h1>404</h1>} ></Route>
-        <Route index element={<Test />} ></Route>
-        {/* <Route index element={<p>{testHook()}</p>} ></Route> */}
+        {/* <Route index element={<Test />} ></Route> */}
       </Route>
     </Routes>
   );

@@ -22,16 +22,9 @@ const SongsList = () => {
         { id: 0, val: '', bool: false }, { id: 1, val: '', bool: false }, { id: 2, val: '', bool: false }
     ])
 
-    const [back, setBack] = useState(false);
-
-    function handleBack(e) {
+    function BackButton() {
         const navigate = useNavigate();
-       
-        useEffect(() => {
-            setBack(prev => !prev)
-            console.log('back', back)
-            if(back) navigate("/artists");
-        }, [back]);
+        return <button onClick={() => navigate(-1)}>Back</button>
     }
     
     // when lyric is pressed fetch it from api
@@ -98,7 +91,7 @@ const SongsList = () => {
             <div id='mini-nav'>
                 <h3>Name</h3>
                 <h3>Type</h3>
-                <button onClick={() => handleBack()}>Back</button>
+                {/* {BackButton()} */}
             </div>
             <div id='all-songs-list'>
                 {songRows() } 
