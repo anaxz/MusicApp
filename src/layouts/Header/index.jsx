@@ -8,10 +8,10 @@ import './Header.css';
 function Header() {
     return <>
         <h1>Music App</h1>
-        <Navbar bg='info'>
-            <NavLink className='nav-link' to='/'>Home</NavLink> 
-            <NavLink className='nav-link' to='artists'>Artists</NavLink>
-            <NavLink className='nav-link' to='song-list'>Songs List</NavLink>
+        <Navbar id='navbar'>
+            <NavLink activateClassName="active" className='nav-link' to='/'>Home</NavLink> 
+            <NavLink activateClassName="active" className='nav-link' to='artists'>Artists</NavLink>
+            <NavLink activateClassName="active" className='nav-link' to='song-list'>Songs List</NavLink>
         </Navbar>
         <Outlet />
     </>
