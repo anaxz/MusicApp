@@ -1,4 +1,5 @@
-##
+# Music App
+## Usage
 - ```npm i``` install dependencies
 - ```npm run build```
 - ```npm run dev```
@@ -21,7 +22,7 @@
 - useEffect -> need more practise
 - custom hook - kinda works but need more practise
 
-### Ref
+## References
 - exercise1: https://github.com/getfutureproof/fp_study_notes_intro_to_react
 - exercise2: https://github.com/getfutureproof/fp_study_notes_react_state_and_eventing
 - exercise3: https://github.com/getfutureproof/fp_study_notes_react_props
@@ -29,7 +30,7 @@
 - exercise5: https://github.com/getfutureproof/fp_study_notes_react_navigation
 - exercise6: https://github.com/getfutureproof/fp_study_notes_advanced_hooks
 - lyrics api: https://lyricsovh.docs.apiary.io/#reference/0/lyrics-of-a-song/search
-
+________
 ### webpack notes
 - npm run build after changes then
 - npm run dev to start webpage
