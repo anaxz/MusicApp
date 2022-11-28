@@ -4,7 +4,9 @@
   "description": "[Intro to React](https://github.com/getfutureproof/fp_guides_wiki/wiki/Intro-to-React)",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -31,7 +33,7 @@
     "@babel/preset-react": "^7.12.5",
     "axios": "^1.2.0",
     "bootstrap": "^5.2.3",
-    "node": "16.13.0",
+    "node": "^19.1.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
@@ -39,5 +41,11 @@
     "react-router-dom": "^6.4.3",
     "redux": "^4.2.0",
     "redux-devtools-extension": "^2.13.9"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/mock-file.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/mock-style.js"
+    }
   }
 }
