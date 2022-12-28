@@ -1,4 +1,43 @@
 .artist-list {
     display: flex;
     flex-direction: column;
+    /* border: 2px dotted red; */
+    
+}
+
+.profile-card {
+    /* background-color: rgb(53, 126, 126); */
+    background-color: rgb(61, 76, 117);
+    color: white;
+    /* border: 2px dotted white; */
+    margin: 10px;
+    padding: 20px;
+}
+
+.profile-card h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.profile-card .card-top {
+    /* border: 2px dotted pink; */
+    display: flex;
+    justify-content: space-between;
+}
+
+#btnGroup button {
+    /* border: 2px solid purple; */
+    border-radius: 20%;
+    color: black;
+    width: fit-content;
+    height: fit-content;
+}
+
+.profile-like-icon {
+    /* border: 2px solid purple;  */
+    background-color: rgb(204, 47, 47);
+    flex-wrap: wrap;
+    text-align: center;
+    height: fit-content;
+    width: fit-content;
 }

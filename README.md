@@ -1,4 +1,16 @@
 # Music App
+
+Made a quick and simple music app; displays artist's info and a songlist.
+
+## Goal
+To learn how to:
+- do make a react app using both vite and webpack
+- reacts testing basics and setup
+- react bootstrap
+
+## Future Features
+- displaying the lyrics of the song
+
 ## Usage
 - ```npm i``` install dependencies
 - ```npm run build```
@@ -7,16 +19,15 @@
 - ```npm run coverage```
 
 ## Changelog
-- Added data and components
-- Added like button
+- Added data, components & like button
 - Added netlify script
 - Refactored to vite instead of webpack (made dev-webpack branch)
 - Added css and refactored to separate css scripts
-- Added routing and navbar
-- Added react bootstrap
+- Added routing and navbar; added react bootstrap
 - Fixed & added test setup (testing branch)
 - useNavigate works & react bootstrap now works with css
-[x] need to move artist list into app for like counter btn
+- Fixed like counter for each artists
+- Cleaned up css for all pages
 
 ## Bugs
 - useEffect -> need more practise

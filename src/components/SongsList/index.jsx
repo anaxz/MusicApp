@@ -10,12 +10,14 @@ import Badge from 'react-bootstrap/Badge';
 import './SongsList.css'
 
 const SongsList = () => {
-    const url = 'https://e.snmc.io/i/600/s/9d9e3fd45354972ac4706d02e4d744c5/7491053/lisa-%E7%B4%85%E8%93%AE%E8%8F%AF-gurenge-Cover-Art.jpg';
+    const url1 = 'https://e.snmc.io/i/600/s/9d9e3fd45354972ac4706d02e4d744c5/7491053/lisa-%E7%B4%85%E8%93%AE%E8%8F%AF-gurenge-Cover-Art.jpg';
+    const url2 = 'https://m.media-amazon.com/images/M/MV5BMTM2NzE1YTEtNTNjZC00MTg5LTkwOTEtNDEwMDI1ODA1YjhkXkEyXkFqcGdeQXVyNjU0ODAyOTY@._V1_.jpg'
+    const url3 = 'https://upload.wikimedia.org/wikipedia/en/c/ce/Fight_Song_by_Rachel_Platten.png'
 
     const [song, setSong] = useState([
-        { id: 0, name: 'Gurenge', artist: "LiSa", src: url, alt: 'img1', like: false },
-        { id: 1, name: 'Hello', artist: "Adele", src: url, alt: 'img2', like: false },
-        { id: 2, name: 'Fight Song', artist: "Rachel Platten", src: url, alt: 'img3', like: false }
+        { id: 0, name: 'Gurenge', artist: "LiSa", src: url1, alt: 'img1', like: false },
+        { id: 1, name: 'Hello', artist: "Adele", src: url2, alt: 'img2', like: false },
+        { id: 2, name: 'Fight Song', artist: "Rachel Platten", src: url3, alt: 'img3', like: false }
     ])
 
     const [lyrics, setLyrics] = useState([
@@ -57,16 +59,16 @@ const SongsList = () => {
     const songRows = () => {
         return song.map((s, i) => (
             <Card className='single-container' key={i}>
-                <Card.Title >{s.name}</Card.Title>
+                <h3 >{s.name}</h3>
                 <Card.Img variant="top" className='song-img' src={s.src} alt={s.alt}/>
 
-                <div className='lyrics-container'>
+                {/* <div className='lyrics-container'> */}
                     {/* <p>{ displayLyrics() }</p> */}
-                </div>
+                {/* </div> */}
                 <ButtonGroup aria-label="Basic example" id='btnGroup'>
                     <Button id='lyric-btn' onClick={handleLyric} variant="light" disabled >Lyrics</Button>
 
-                    <Button onClick={() => likeBtn(s.like, s.id)} variant="light">Like?</Button>
+                    <Button onClick={() => likeBtn(s.like, s.id)} variant="light">Like</Button>
                     <Badge id={`like-icon-${s.id}`} className='song-like-icon' bg="secondary" >Like</Badge>
                 </ButtonGroup>
             </Card>
@@ -89,8 +91,8 @@ const SongsList = () => {
     return (
         <div id='song-list'>
             <div id='mini-nav'>
-                <h3>Name</h3>
-                <h3>Type</h3>
+                {/* <h3>Name</h3>
+                <h3>Type</h3> */}
                 {/* {BackButton()} */}
             </div>
             <div id='all-songs-list'>

@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
 
 import './ArtistsList.css'
-import { Profile }  from '../';
+// import { Profile }  from '../';
 
 
 const ArtistsList = () => {
@@ -35,7 +35,20 @@ const ArtistsList = () => {
         setClick(prev => !prev) 
         if(click) artists[id].likes++;
         else artists[id].likes--;
-        return artists[id].likes;
+        // return artists[id].likes;
+    }
+
+    const displayType = (type) => {
+        let arr = []
+        
+        if(type.length >= 1) {
+            type.forEach((ele, i )=> {
+                if(type.length-1 !== i) arr += ele + ', ';
+                else arr += ele;
+            });
+            return arr;
+        } 
+        return type
     }
 
     function renderDisplay(){
@@ -44,18 +57,21 @@ const ArtistsList = () => {
             // id={a.id} name={a.name} type={a.type} country={a.country} intro={a.intro} likes={a.likes} />
 
             <Card className='profile-card' key={i} >
-                <Card.Title>{a.name}</Card.Title>
-
-                <div>
-                    <p>Name: {a.name}</p>
+                <h3>{a.name}</h3>
+                <div className='card-top'>
+                    <div>
+                        <p>Type: {displayType(a.type)}</p>
+                        <p>Country: {a.country}</p>
+                    </div>
+                    
                     <ButtonGroup aria-label="Basic example" id='btnGroup'>
                         <Button onClick={(e) => likeBtn(e, a.id)} variant="light">Like</Button>
                         <Badge id={`like-icon-${a.id}`} className='profile-like-icon' bg="secondary" >{a.likes}</Badge>
                     </ButtonGroup>
-
-                    <p>Type: {a.type}</p>
-                    <p>Country: {a.country}</p>
-                    <p>Intro: {a.intro}</p>
+                    
+                </div>
+                <div className='card-bottom'>
+                    <p>{a.intro}</p>
                 </div>
             </Card>
         ))

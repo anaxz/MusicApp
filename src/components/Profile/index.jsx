@@ -4,7 +4,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
 
-import './Profile.css';
+// import './Profile.css';
 
 const Profile = ({ id, name, type, country, intro, likes }) => {
 
