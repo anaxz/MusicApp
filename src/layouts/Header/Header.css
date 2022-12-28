@@ -5,7 +5,7 @@ h1 {
 
 #navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: rgb(63, 8, 77);
     padding: 10px;
 }

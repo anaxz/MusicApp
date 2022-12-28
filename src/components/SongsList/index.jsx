@@ -13,21 +13,16 @@ const SongsList = () => {
     const url = 'https://e.snmc.io/i/600/s/9d9e3fd45354972ac4706d02e4d744c5/7491053/lisa-%E7%B4%85%E8%93%AE%E8%8F%AF-gurenge-Cover-Art.jpg';
 
     const [song, setSong] = useState([
-        { id: 0, name: 'Gurenge', src: url, alt: 'img1', like: false },
-        { id: 1, name: 'song2', src: url, alt: 'img2', like: false },
-        { id: 2, name: 'song3', src: url, alt: 'img3', like: false }
+        { id: 0, name: 'Gurenge', artist: "LiSa", src: url, alt: 'img1', like: false },
+        { id: 1, name: 'Hello', artist: "Adele", src: url, alt: 'img2', like: false },
+        { id: 2, name: 'Fight Song', artist: "Rachel Platten", src: url, alt: 'img3', like: false }
     ])
 
     const [lyrics, setLyrics] = useState([
         { id: 0, val: '', bool: false }, { id: 1, val: '', bool: false }, { id: 2, val: '', bool: false }
     ])
-
-    function BackButton() {
-        const navigate = useNavigate();
-        return <button onClick={() => navigate(-1)}>Back</button>
-    }
     
-    // when lyric is pressed fetch it from api
+    // // when lyric is pressed fetch it from api
     // useEffect(() => {
     //     async function getLyrics(){
     //         const response = await axios.get('https://api.lyrics.ovh/v1/Coldplay/Adventure%20of%20a%20Lifetime')
@@ -37,6 +32,11 @@ const SongsList = () => {
 
     //     getLyrics()
     // }, [lyrics]);
+
+    function BackButton() {
+        const navigate = useNavigate();
+        return <button onClick={() => navigate(-1)}>Back</button>
+    }
 
     function handleLyric(e){
         // e.preventDefault();
@@ -64,7 +64,7 @@ const SongsList = () => {
                     {/* <p>{ displayLyrics() }</p> */}
                 </div>
                 <ButtonGroup aria-label="Basic example" id='btnGroup'>
-                    <Button id='lyric-btn' onClick={handleLyric} variant="light">Lyrics</Button>
+                    <Button id='lyric-btn' onClick={handleLyric} variant="light" disabled >Lyrics</Button>
 
                     <Button onClick={() => likeBtn(s.like, s.id)} variant="light">Like?</Button>
                     <Badge id={`like-icon-${s.id}`} className='song-like-icon' bg="secondary" >Like</Badge>

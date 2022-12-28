@@ -19,9 +19,10 @@ const Profile = ({ id, name, type, country, intro, likes }) => {
     // change to counter
     const likeBtn = (e) => {
         setClick(prev => !prev) 
-        console.log(click)
+        console.log("prof: "+click)
         if(click) likes++;
         else likes--;
+        return likes;
         // return displayLike(click, id)
     }
     
@@ -30,7 +31,7 @@ const Profile = ({ id, name, type, country, intro, likes }) => {
         <div>
             <p>Name: {name}</p>
             <ButtonGroup aria-label="Basic example" id='btnGroup'>
-                <Button onClick={() => likeBtn()} variant="light">Like?</Button>
+                <Button onClick={() => likeBtn()} variant="light">Like</Button>
                 <Badge id={`like-icon-${id}`} className='profile-like-icon' bg="secondary" >{likes}</Badge>
             </ButtonGroup>
 
@@ -39,13 +40,6 @@ const Profile = ({ id, name, type, country, intro, likes }) => {
             <p>Intro: {intro}</p>
         </div>
     </Card>
-
-    // return <div className='profile-card'>
-    //     <p>Name: {name}</p>
-    //     <p>Type: {type}</p>
-    //     <p>Country: {country}</p>
-    //     <p>Intro: {intro}</p>
-    // </div>
 }
 
 export default Profile; 
